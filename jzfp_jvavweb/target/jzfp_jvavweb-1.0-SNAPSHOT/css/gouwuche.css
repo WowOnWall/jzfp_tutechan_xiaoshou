@@ -1,0 +1,12 @@
+.counter {
+    margin-top: 10px;
+}
+
+.counter button {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.counter span {
+    margin: 0 10px;
+}

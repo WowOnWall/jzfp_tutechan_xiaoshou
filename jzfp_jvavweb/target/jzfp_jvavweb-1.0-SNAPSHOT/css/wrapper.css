@@ -1,0 +1,156 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('../img/sui.png') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo和链接容器样式 */
+.logo-div {
+    display: flex;
+    align-items: center; /* 垂直对齐 */
+    gap: 10px; /* 添加间距 */
+}
+
+/* Logo图片样式 */
+.logo-div img {
+    height: 50px; /* 根据需要调整 */
+    width: 50px; /* 根据需要调整 */
+}
+
+/* 关于永寿链接样式 */
+.about-link {
+    text-decoration: none;
+    color: #007bff; /* 链接颜色 */
+    font-weight: bold; /* 粗体字 */
+    font-size: 16px; /* 字体大小 */
+    transition: color 0.3s, transform 0.3s; /* 颜色和变换的过渡效果 */
+}
+
+.about-link:hover {
+    color: #0056b3; /* 鼠标悬停时的颜色变化 */
+    transform: scale(1.1); /* 鼠标悬停时的放大效果 */
+}
+
+.cart-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 水平居中 */
+    gap: 20px; /* 设置元素之间的间距 */
+    padding: 20px; /* 增加容器内边距 */
+}
+
+.cart-wrapper .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cart-wrapper .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1); /* 鼠标悬停时放大 */
+}
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+    }
+}
+.cart img.shake {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both; /* 应用躲闪动画 */
+}
+.cart {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* 设置元素之间的间距 */
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%); /* 从左侧外进入 */
+    }
+    to {
+        transform: translateX(0); /* 移动到原始位置 */
+    }
+}
+
+/* 应用动画到提醒消息的容器 */
+.cart-message {
+    animation: slideIn 5s linear infinite; /* 持续时间、缓动函数和迭代次数 */
+    padding-left: 10px; /* 确保文本不会在边缘显示 */
+    display: inline-block; /* 使元素可以进行变换 */
+    color: #d3404d;
+}
+
+
+.cart img {
+    height: 50px;
+    width: 50px;
+}
+
+/* 如果需要响应式设计，可以添加媒体查询 */
+@media (max-width: 768px) {
+    .cart-wrapper {
+        flex-direction: column;
+        gap: 10px; /* 在小屏幕上减小间距 */
+    }
+}
+/* 搜索表单样式 */
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-form form {
+    display: flex;
+    gap: 10px;
+}
+
+.search-form input[type="search"] {
+    padding: 8px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.search-form button {
+    padding: 8px 16px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-form button:hover {
+    background-color: #4cae4c;
+}

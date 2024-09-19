@@ -1,0 +1,24 @@
+table {
+    width: 80vw; /* 表格宽度为视口宽度的80% */
+    margin: 0 auto; /* 自动外边距使表格居中 */
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td, th {
+    width: 33.33%; /* 假设表格有三列，每列宽度为总宽度的三分之一 */
+    height: 10vh; /* 每行的高度为视口高度的10% */
+    text-align: center;
+    vertical-align: middle;
+}
+
+td img {
+    max-width: 100%; /* 图片最大宽度不超过单元格宽度 */
+    height: auto; /* 图片高度自动调整 */
+}
+p {
+    color: red; /* 使用颜色名 */
+}
+span {
+    color: #ffffff; /* 使用16进制色值 */
+}

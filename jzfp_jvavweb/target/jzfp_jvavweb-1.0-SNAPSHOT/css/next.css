@@ -1,0 +1,48 @@
+.pagination {
+    display: flex; /* 使用Flexbox布局 */
+    justify-content: center; /* 水平居中 */
+    gap: 5px; /* 设置按钮之间的间距 */
+    margin-top: 20px; /* 在内容和分页之间添加一些间距 */
+}
+
+.pagination a {
+    padding: 8px 16px;
+    text-decoration: none;
+    color: black;
+    border: 1px solid #ddd;
+    margin: 0 5px; /* 保持间距 */
+    display: inline-block;
+    border-radius: 5px; /* 增加圆角 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 添加阴影 */
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s; /* 平滑过渡效果 */
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2); /* 鼠标悬停时增加阴影 */
+    transform: scale(1.1); /* 鼠标悬停时放大 */
+}
+
+.pagination a.active {
+    background-color: #0056b3;
+    color: white;
+    border-color: #0056b3;
+    pointer-events: none; /* 禁止点击 */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2); /* 增加阴影 */
+}
+
+.pagination a.disabled {
+    color: #ccc;
+    border-color: #ccc;
+    pointer-events: none; /* 禁止点击 */
+    box-shadow: none; /* 移除阴影 */
+}
+
+@media (max-width: 600px) {
+    .pagination a {
+        padding: 6px 12px;
+        font-size: 14px; /* 在小屏幕上减小字体大小 */
+    }
+}
